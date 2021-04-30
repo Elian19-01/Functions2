@@ -133,8 +133,38 @@ def string_reverse(str1):
 print(string_reverse('abcd5678'))
 ```
 
+## ex05c
+```c
+#include <stdio.h>
+int main() {
+    int i, a;
+    unsigned long long fact = 1;
+    printf("Inserte numero: ");
+    scanf("%d", &i);
 
+    // shows error if the user enters a negative integer
+    if (i < 0)
+        printf("numero no valido");
+    else {
+        for (a = 1; a <= n; ++a) {
+            fact *= a;
+        }
+        printf("El factorial es %llu", fact);
+    }
 
-	
+    return 0; 
+}
+```
+## ex05py
+```py
+def factorial(a):
+    if a == 0:
+        return 1
+    else:
+        return a * factorial(a-1)
+a=int(input("Input a number to compute the factiorial : "))
+print(factorial(a))
+```
+
 
 	
