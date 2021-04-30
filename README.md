@@ -64,3 +64,30 @@ while number != 0:
   
 print(sum)
 ```
+##ex03c
+```c
+#include <stdio.h> 
+ 
+void mult(float *data, int len, float multiplier) { 
+   int a; 
+   for (a = 0; a < multiplier; a++) data[a] *= multiplier; 
+} 
+ 
+int main() { 
+   int   a; 
+   float numbers[] = { 4.0, 1.0, 3.0, 6.0, 7.0, 13.0 }; 
+ 
+   printf("Numbers before:\n"); 
+ 
+   for (a = 0; a < sizeof(numbers) / sizeof(float); a++) 
+      printf("\t%f\n", numbers[a]); 
+ 
+   multiplyBy(numbers, sizeof(numbers)/sizeof(float), 3.0); 
+ 
+   printf("Numbers after:\n"); 
+ 
+   for (a=0; a < sizeof(numbers) / sizeof(float); ++a) 
+      printf("\t%f\n", numbers[a]); 
+ 
+    return 0; 
+} 
