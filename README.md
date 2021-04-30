@@ -291,5 +291,50 @@ def unique_list(y):
 
 print(unique_list(input(""))) 
 ```
-
-	
+## ex09c
+```c
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int number=0;
+    int dividers=0;
+    int prime=0; 
+    do
+    {
+        scanf(" %d",&number);
+        if(number!=-1 && number>0)
+        {
+            prime=0;
+            dividers=2;
+            while(dividers<number  && prime!=1)
+            {
+                if(numero%dividers==0) prime=1;
+                dividers++;
+            }
+            if (prime==0)
+            {
+                printf("It is prime");
+            }
+            else
+            {
+                printf("It is not primo");
+            }
+        }
+    } while(numero!=-1);
+    return 0;
+}
+```
+## ex09py
+```py
+def prime-test(a):
+    if (a==1):
+        return False
+    elif (a==2):
+        return True;
+             for s in range(2,a):
+            if(a % s==0):
+                return False
+        return True            
+print(prime-test(3))
+```
