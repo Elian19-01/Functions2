@@ -119,6 +119,7 @@ int main(void) {
 	scanf("%s", &userInput);
 	InvertString(userInput);
 	return 0;
+}
 ```
 ## ex04py
 ```c
@@ -165,6 +166,75 @@ def factorial(a):
 a=int(input("Input a number to compute the factiorial : "))
 print(factorial(a))
 ```
+## ex06c
+```c
+#include<stdio.h>
+ 
+int main() {
+    int num, min, max;
+     
+    printf("Ingrese un numero\n");
+    scanf("%d", &num);
+    printf("Ingrese los numeros que definen el rango\n");
+    scanf("%d %d", &min, &max);
+     
+    if((num-min)*(num-max) <= 0){
+        printf("Dentro del rango");
+    } else {
+     printf("Fuera del rango");
+    }
+ 
+    return 0;
+    }
+```
+## ex06py
+```py
+def test_range(a):
+    if a in range(13,34):
+        print( " %s is in the range"(a))
+    else :
+        print("The number is outside the range.")
+ return(0)
+```
+## ex07c
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int mayus = 0, minus = 0;
+    char ch[80];
+    int i = 0;
+    printf("\nIngrese palabra: \n");
+    fgets(ch, sizeof(ch), stdin);
+    while (ch[i] != '\0')
+    {
+        if (ch[i] >= 'A' && ch[i] <= 'Z')
+            mayus++;
+        if (ch[i] >= 'a' && ch[i] <= 'z')
+            minus++;
+        i++;
+    }
+    printf("Numero de mayusculas: %d \nNumero de minusculas: %d", mayus, minus);
+    return 0;
+}
+```
+## ex07py
+```python
+def string_test(a):
+    d={"upper":0, "lower":0}
+    for b in a:
+        if b.isupper():
+           d["upper"]+=1
+        elif c.islower():
+           d["lower"]+=1
+        else:
+           pass
+    print ("Original String is  : ", a)
+    print ("Upper characters : ", d["upper"])
+    print ("Lower Characters : ", d["lower"])
+```
+  
 
 
 	
