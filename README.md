@@ -173,15 +173,15 @@ print(factorial(a))
 int main() {
     int num, min, max;
      
-    printf("Ingrese un numero\n");
+    printf("write a number\n");
     scanf("%d", &num);
-    printf("Ingrese los numeros que definen el rango\n");
+    printf("Enter the numbers that define the range\n");
     scanf("%d %d", &min, &max);
      
     if((num-min)*(num-max) <= 0){
         printf("Dentro del rango");
     } else {
-     printf("Fuera del rango");
+     printf("outside the range");
     }
  
     return 0;
@@ -205,7 +205,7 @@ int main(void)
     int mayus = 0, minus = 0;
     char ch[80];
     int i = 0;
-    printf("\nIngrese palabra: \n");
+    printf("\nwrite a word: \n");
     fgets(ch, sizeof(ch), stdin);
     while (ch[i] != '\0')
     {
@@ -215,7 +215,7 @@ int main(void)
             minus++;
         i++;
     }
-    printf("Numero de mayusculas: %d \nNumero de minusculas: %d", mayus, minus);
+    printf("no. of Upper: %d \n no.of lower: %d", mayus, minus);
     return 0;
 }
 ```
@@ -234,7 +234,62 @@ def string_test(a):
     print ("Upper characters : ", d["upper"])
     print ("Lower Characters : ", d["lower"])
 ```
-  
+## ex08c
+```c
+#include <stdio.h>
+ 
+int main()
+{
+	int arr[10], FreqArr[10], i, j, Count, Size;
+	
+	printf("\n Ingrese numero de elementos a comparar: \n");
+	scanf("%d", &Size);
+	
+	printf("Ingrese los elementos\n");
+	for (i = 0; i < Size; i++)
+	{
+    	scanf("%d", &arr[i]);
+    	FreqArr[i] = -1;
+   	}     
+ 
+	for (i = 0; i < Size; i++)
+	{
+		Count = 1;
+		for(j = i + 1; j < Size; j++)
+		{
+    		if(arr[i] == arr[j])
+    		{
+    			Count++;
+    			FreqArr[j] = 0;
+    		}
+    	}
+    	if(FreqArr[i] != 0)
+    	{
+    		FreqArr[i] = Count;
+		}
+	}
 
+ 	printf("Lista de elementos diferentes: ");
+ 	for (i = 0; i < Size; i++)
+  	{
+  		if(FreqArr[i] == 1)
+  		{
+  			printf("%d\n", arr[i]);
+		}		
+  	}	     
+ 	return 0;
+}
+```
+ex08py
+```py
+def unique_list(y):
+  z = []
+  for x in y:
+    if x not in z:
+      z.append(x)
+  return z
+
+print(unique_list(input(""))) 
+```
 
 	
