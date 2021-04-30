@@ -91,3 +91,13 @@ int main() {
  
     return 0; 
 } 
+```
+##ex03py
+```py
+def multiply(numbers):  
+    total = 1
+    for x in numbers:
+        total *= x  
+    return total  
+print(multiply((4, 2, 5, 8, 5, 7)))
+```
