@@ -31,25 +31,25 @@ print (biggest)
 ## ex02c
 ```c
 #include <stdio.h>
+#include <string.h>
+
+int usarr[] = {92, 237, 2311, 18340};
+int len = sizeof(usarr) / sizeof(usarr[0]);
+
+int addition(int usarr[], int len)
+{
+    int sumno = 0;
+ 
+    for (int i = 0; i < len; i++)
+    {sumno += usarr[i];}
+ 
+    return sumno;
+}
  
 int main()
 {
-  int a, sum = 0, i, valor;
- 
-  printf("Inserte numeros a sumar\a");
-  scanf("%d", &a);
- 
-  printf("Ingrese %d numeros\a", a);
- 
-  for (i = 1; i <= a; i++)
-  {
-    scanf("%d", &valor);
-    sum = sum + valor;
-  }
- 
-  printf("El resultado es %d\a", sum);
- 
-  return 0;
+    printf("Sum of the list is %d", addition(usarr, len));
+    return 0;
 }
 ```
 ## ex02py
@@ -189,12 +189,16 @@ int main() {
 ```
 ## ex06py
 ```py
-def test_range(a):
-    if a in range(13,34):
-        print( " %s is in the range"(a))
+def inrange(user, lownum, maxnum):
+    if user in range(lownum, maxnum):
+        print( " %s is in the range"%str(user))
     else :
-        print("The number is outside the range.")
- return(0)
+        print("The number is outside the given range.")
+
+lownum = int(input("Write a number for the lower number of the range: "))
+maxnum = int(input("Write a number for the max number of the range: "))
+user = int(input("Write a number and lets see if it is in a range: "))
+
 ```
 ## ex07c
 ```c
@@ -338,6 +342,48 @@ def prime-test(a):
         return True            
 print(prime-test(3))
 ```
+## ex10c
+```c
+#include<stdio.h>
+
+int no, arr[20];
+
+void evennumbers()
+{
+  printf("Enter the size of the array: ");
+  scanf("%d", &no);
+
+  printf("Write array numbers: \n");
+  for(int i = 0; i < no; i++)
+   {
+      scanf("%d",&arr[i]);
+   }
+
+  printf("Even numbers in the array are: \n");
+  for(int i = 0; i < no; i++)
+   {
+    if(arr[i] % 2 == 0)
+    printf("%d ", arr[i]);
+   }
+}
+
+int main()
+{
+  evennumbers();
+  return 0;
+}
+```
+## ex10py
+```py
+def evennums(user):
+    no = []
+    for a in user:
+        if a % 2 == 0:
+            no.append(a)
+    return no
+
+print(evennums([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 432, 234234, 234243234, 24, 43553, 21, 41,]))
+```
 ## ex11c
 ```c
 # include <stdio.h>   
@@ -375,3 +421,49 @@ print(perfect_number(int(input())))
 
 ```
 
+## ex12c
+```c
+#include<stdio.h>
+#include<string.h>
+
+int length, pos1, pos2;
+char user[20];
+
+void palindrome()
+{
+  printf("Write a word and lets see if its a palindrome: ");
+  scanf("%s", user);
+  length = strlen(user);
+
+  pos1 = 0;
+  pos2 = length - 1;
+  while (pos2 > pos1)
+  {
+    if (user[pos1] != user[pos2])
+    {
+      printf("0");
+    }
+    else if (user[pos1] == user[pos2])
+    {
+      printf("1");
+    }
+    pos1 += 1;
+    pos2 -= 1;
+  } 
+}
+```
+## ex12py
+```py
+def palindrome(user):
+	pos1 = 0
+	pos2 = len(user) - 1	
+	while pos2 >= pos1:
+		if not user[pos1] == user[pos2]:
+			return False
+		pos1 += 1
+		pos2 -= 1
+	return True
+
+user = input("Write a word and lets see if its a palindrome: ")
+print(palindrome(user))
+```
