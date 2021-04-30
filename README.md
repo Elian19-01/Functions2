@@ -1,5 +1,5 @@
 # Functions2
-##ex01c
+## ex01c
 
 ```c
 #include <stdio.h> 
@@ -22,13 +22,13 @@ int main()
 }
 ```
 
-##ex01py
+## ex01py
 ```py
 a, b, c = input("Enter three values to compare\n").split()
 biggest = max(a, b, c)
 print (biggest)
 ```
-##ex02c
+## ex02c
 ```c
 #include <stdio.h>
  
@@ -52,7 +52,7 @@ int main()
   return 0;
 }
 ```
-##ex02py
+## ex02py
 ```py
 print("Inser numbers to sum, enter 0 to exit\x")
 sum = 0.0
@@ -64,7 +64,7 @@ while number != 0:
   
 print(sum)
 ```
-##ex03c
+## ex03c
 ```c
 #include <stdio.h> 
  
@@ -92,7 +92,7 @@ int main() {
     return 0; 
 } 
 ```
-##ex03py
+## ex03py
 ```py
 def multiply(numbers):  
     total = 1
@@ -101,3 +101,40 @@ def multiply(numbers):
     return total  
 print(multiply((4, 2, 5, 8, 5, 7)))
 ```
+## ex04c
+```c
+#include<stdio.h>
+#include<string.h>
+
+void InvertString (char(userInput[65])){
+	int i;
+	int largo = strlen(userInput);
+	for(i=largo-1; i>=0; i--){
+		printf("%c", userInput[i]);
+	}
+}
+
+int main(void) {
+	char userInput[65];
+	scanf("%s", &userInput);
+	InvertString(userInput);
+	return 0;
+```
+## ex04py
+```c
+def string_reverse(str1):
+
+    rstr1 = ''
+    index = len(str1)
+    while index > 0:
+        rstr1 += str1[ index - 1 ]
+        index = index - 1
+    return rstr1
+print(string_reverse('abcd5678'))
+```
+
+
+
+	
+
+	
