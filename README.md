@@ -338,3 +338,40 @@ def prime-test(a):
         return True            
 print(prime-test(3))
 ```
+## ex11c
+```c
+# include <stdio.h>   
+
+int main()   
+{   
+ int i, Number, Sum = 0 ;   
+  
+ printf("\n Please Enter any number \n") ;   
+ scanf("%d", &Number) ;   
+ 
+ for(i = 1 ; i < Number ; i++)   
+  {   
+   if(Number % i == 0)   
+     Sum = Sum + i ;   
+  }    
+
+ if (Sum == Number)   
+    printf("\n %d is a Perfect Number", Number) ;   
+ else   
+    printf("\n%d is not the Perfect Number", Number) ;   
+
+return 0 ;   
+}
+```
+## ex11py
+```py
+def perfect_number(s):
+    sum = 0
+    for i in range(1, s):
+        if s % i == 0:
+            sum += i
+    return sum == s
+print(perfect_number(int(input())))
+
+```
+
